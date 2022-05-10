@@ -1,27 +1,24 @@
-import { useState, useReducer } from 'react';
-import {BrowserRouter as Router} from 'react-router-dom'
+
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
+import PageRender from './PageRender';
+import Register from './pages/register';
+import Login from './pages/login';
+import Home from './pages/home';
+
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <Router>
-      <div style={{padding: '0 20px'}}>
-        <h1>{count}</h1>
-        <button onClick={() => setCount(count - 1)}>
-          Down
-        </button>
-        <button onClick={() => setCount(count + 1)}>
-          Up
-        </button>
-      
-
+      <input type="checkbox" name="" id="theme" />
+      <div className='App'>
+        <div className="main">
+          <Routes>
+            <Route path="/:page" exact element={<PageRender/>} />
+            <Route path="/:page/:id" exact element={<PageRender/>} />
+          </Routes>
+        </div>
       </div>
-      
-      
-      {/* Header */}
-      
     </Router>
-    
   );
 }
 
