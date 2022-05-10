@@ -14,13 +14,9 @@ code {
     monospace;
 }
 
-#theme {
-  display: none;
-}
-
-#theme:checked ~ .App {
+/* #theme:checked ~ .App {
   filter: invert(1)
-}
+} */
 
 .App {
   width: 100%;
@@ -30,6 +26,6 @@ code {
 
 .main{
   max-width: 1000px;
-  width: 100%;
+  width: 100px;
   margin: auto;
 }
